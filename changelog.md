@@ -1,97 +1,11 @@
 # Changelog
 All notable changes to this project will be documented in this file.
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and follows [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
-
-## [7.0.3] - 2023-07-27
-### Fixed
-- TypeScript types resolution for Node.js 16 and up, thanks to @amiller-gh and @privatenumber!
-
-## [7.0.2] - 2023-07-08
-### Fixed
-- Missing bubble sort code in npm package.
-
-## [7.0.0] - 2023-05-29
-### Fixed
-- Border properties `border-end` and `border-start` radius moving unsafely.
-### Removed
-- Node.js 12 support.
-
-## [6.4.1] - 2023-07-08
-### Fixed
-- Backport: Missing bubble sort code in npm package.
-
-## [6.4.0] - 2023-03-23
-### Added
-- New container, overflow and font related properties.
-### Fixed
-- Order of shorthand properties between overrides that are already changing position with `keepOverrides`.
-
-## [6.3.1] - 2022-09-02
-### Fixed
-- Logical border properties moving with `keepOverrides`.
-
-## [6.3.0] - 2022-06-09
-### Added
-- New properties: `content-visibility` and `image-orientation`.
-### Fixed
-- Logical properties like `padding-block` moved unsafely with `keepOverrides`.
-
-## [6.2.2] - 2022-03-27
-### Fixed
-- Types export for CommonJS.
-- Expected plugin type, now using PostCSS `PluginCreator` type.
-
-## [6.2.1] - 2022-03-26
-### Fixed
-- Include types in npm package files.
-
-## [6.2.0] - 2022-03-26
-### Added
-- TypesScript types, special thanks to @peterblazejewicz.
-- Named exports.
-- New properties regarding font hyphens, print color and scrollbar gutter.
-### Fixed
-- Dynamic imports in CommonJS output.
-### Changed
-- No more dependencies, smaller ESM package.
-
-## [6.1.4] - 2022-01-08
-### Fixed
-- Crash on missing paired comment node from invalid SCSS parsing.
-
-## [6.1.3] - 2021-09-06
-### Fixed
-- Crash on missing node raws before content.
-
-## [6.1.2] - 2021-09-06
-### Fixed
-- Crash on two comments in the same line.
-
-## [6.1.1] - 2021-07-24
-### Fixed
-- Usage of built-in orders with CommonJS.
-
-## [6.1.0] - 2021-07-24
-### Changed
-- Internal code to load built-in orders using dynamic import instead of using Node.js `fs`. Enables usage in other environments such as the browser.
-### Added
-- New properties regarding mask border, forced color adjustment & font styling overrides.
-
-## [6.0.3] - 2021-05-11
-### Fixed
-- Sorting padding and border shorthands with `keepOverrides` enabled.
-- Property reset with `all`, the property is moved to the top.
-### Changed
-- Add back Node.js 10 support.
-
-## [6.0.2] - 2020-11-04
-### Fixed
-- Loading built-in order using a relative path.
+The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and follows [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [6.0.1] - 2020-10-26
 ### Added
 - ES module export type, both CommonJS and ES module importing are supported.
-- Newer font and grid CSS properties like `row-gap` and `font-display`.
+- Newer font and grid CSS properties like `row-grap` and `font-display`.
 ### Changed
 - Scraping of CSS properties now comes from MDN browser compatibility package.
 - PostCSS upgraded to version eight which changes PostCSS to a peer dependency.
@@ -161,24 +75,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) 
 ### Changed
 - Put declarations before nested declarations.
 
-[7.0.3]: https://github.com/Siilwyn/css-declaration-sorter/compare/v7.0.2...v7.0.3
-[7.0.2]: https://github.com/Siilwyn/css-declaration-sorter/compare/v7.0.0...v7.0.2
-[7.0.0]: https://github.com/Siilwyn/css-declaration-sorter/compare/v6.4.1...v7.0.0
-[6.4.1]: https://github.com/Siilwyn/css-declaration-sorter/compare/v6.4.0...v6.4.1
-[6.4.0]: https://github.com/Siilwyn/css-declaration-sorter/compare/v6.3.1...v6.4.0
-[6.3.1]: https://github.com/Siilwyn/css-declaration-sorter/compare/v6.3.0...v6.3.1
-[6.3.0]: https://github.com/Siilwyn/css-declaration-sorter/compare/v6.2.2...v6.3.0
-[6.2.2]: https://github.com/Siilwyn/css-declaration-sorter/compare/v6.2.1...v6.2.2
-[6.2.1]: https://github.com/Siilwyn/css-declaration-sorter/compare/v6.2.0...v6.2.1
-[6.2.0]: https://github.com/Siilwyn/css-declaration-sorter/compare/v6.1.4...v6.2.0
-[6.1.4]: https://github.com/Siilwyn/css-declaration-sorter/compare/v6.1.3...v6.1.4
-[6.1.3]: https://github.com/Siilwyn/css-declaration-sorter/compare/v6.1.2...v6.1.3
-[6.1.2]: https://github.com/Siilwyn/css-declaration-sorter/compare/v6.1.1...v6.1.2
-[6.1.1]: https://github.com/Siilwyn/css-declaration-sorter/compare/v6.1.0...v6.1.1
-[6.1.0]: https://github.com/Siilwyn/css-declaration-sorter/compare/v6.0.3...v6.1.0
-[6.0.3]: https://github.com/Siilwyn/css-declaration-sorter/compare/v6.0.2...v6.0.3
-[6.0.2]: https://github.com/Siilwyn/css-declaration-sorter/compare/v6.0.1...v6.0.2
-[6.0.1]: https://github.com/Siilwyn/css-declaration-sorter/compare/v5.1.2...v6.0.1
 [5.1.2]: https://github.com/Siilwyn/css-declaration-sorter/compare/v5.1.1...v5.1.2
 [5.1.1]: https://github.com/Siilwyn/css-declaration-sorter/compare/v5.1.0...v5.1.1
 [5.1.0]: https://github.com/Siilwyn/css-declaration-sorter/compare/v5.0.0...v5.1.0

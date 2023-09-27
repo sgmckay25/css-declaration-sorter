@@ -18,6 +18,8 @@ export const shorthandData = {
     'background-clip',
     'background-attachment',
     'background-color',
+    '-webkit-background-clip',
+    
   ],
   'columns': [
     'column-width',
@@ -433,11 +435,5 @@ export const shorthandData = {
   'text-emphasis': [
     'text-emphasis-style',
     'text-emphasis-color',
-  ],
-  'font-synthesis': [
-    'font-synthesis-weight',
-    'font-synthesis-style',
-    'font-synthesis-small-caps',
-    'font-synthesis-position',
   ],
 };

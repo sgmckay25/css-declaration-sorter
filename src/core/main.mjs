@@ -129,13 +129,7 @@ function withOverridesComparator (shorthandData) {
 
 function orderComparator (order) {
   return function (a, b) {
-    const bIndex = order.indexOf(b);
-
-    if (bIndex === -1) {
-      return 0;
-    }
-
-    return order.indexOf(a) - bIndex;
+    return order.indexOf(a) - order.indexOf(b);
   };
 }
 

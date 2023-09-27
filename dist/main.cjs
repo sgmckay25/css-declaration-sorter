@@ -439,12 +439,6 @@ const shorthandData = {
     'text-emphasis-style',
     'text-emphasis-color',
   ],
-  'font-synthesis': [
-    'font-synthesis-weight',
-    'font-synthesis-style',
-    'font-synthesis-small-caps',
-    'font-synthesis-position',
-  ],
 };
 
 function bubbleSort (list, comparator) {
@@ -606,13 +600,7 @@ function withOverridesComparator (shorthandData) {
 
 function orderComparator (order) {
   return function (a, b) {
-    const bIndex = order.indexOf(b);
-
-    if (bIndex === -1) {
-      return 0;
-    }
-
-    return order.indexOf(a) - bIndex;
+    return order.indexOf(a) - order.indexOf(b);
   };
 }
 
@@ -666,7 +654,6 @@ const properties$2 = [
   "background-position-y",
   "background-repeat",
   "background-size",
-  "baseline-source",
   "block-size",
   "border",
   "border-block",
@@ -780,7 +767,6 @@ const properties$2 = [
   "font",
   "font-display",
   "font-family",
-  "font-feature-settings",
   "font-kerning",
   "font-language-override",
   "font-optical-sizing",
@@ -790,10 +776,6 @@ const properties$2 = [
   "font-stretch",
   "font-style",
   "font-synthesis",
-  "font-synthesis-position",
-  "font-synthesis-small-caps",
-  "font-synthesis-style",
-  "font-synthesis-weight",
   "font-variant",
   "font-variant-alternates",
   "font-variant-caps",
@@ -875,7 +857,6 @@ const properties$2 = [
   "mask-repeat",
   "mask-size",
   "mask-type",
-  "math-depth",
   "math-style",
   "max-block-size",
   "max-height",
@@ -1027,7 +1008,8 @@ const properties$2 = [
   "word-break",
   "word-spacing",
   "writing-mode",
-  "z-index"
+  "z-index",
+  "-webkit-background-clip",
 ];
 
 var alphabetical = /*#__PURE__*/Object.freeze({
@@ -1083,7 +1065,6 @@ const properties$1 = [
   "align-self",
   "justify-self",
   "vertical-align",
-  "baseline-source",
   "order",
   "float",
   "clear",
@@ -1379,10 +1360,6 @@ const properties$1 = [
   "font-palette",
   "font-size-adjust",
   "font-synthesis",
-  "font-synthesis-weight",
-  "font-synthesis-style",
-  "font-synthesis-small-caps",
-  "font-synthesis-position",
   "font-variant-alternates",
   "font-variant-caps",
   "font-variant-east-asian",
@@ -1391,7 +1368,6 @@ const properties$1 = [
   "font-variant-numeric",
   "font-variant-position",
   "font-variation-settings",
-  "font-feature-settings",
   "ascent-override",
   "descent-override",
   "line-gap-override",
@@ -1409,7 +1385,6 @@ const properties$1 = [
   "unicode-range",
   "user-select",
   "ruby-position",
-  "math-depth",
   "math-style",
   "text-combine-upright",
   "text-align",
@@ -1438,7 +1413,8 @@ const properties$1 = [
   "word-spacing",
   "overflow-wrap",
   "tab-size",
-  "widows"
+  "widows",
+  "-webkit-background-clip"
 ];
 
 var concentricCss = /*#__PURE__*/Object.freeze({
@@ -1700,10 +1676,6 @@ const properties = [
   "font-palette",
   "font-size-adjust",
   "font-synthesis",
-  "font-synthesis-weight",
-  "font-synthesis-style",
-  "font-synthesis-small-caps",
-  "font-synthesis-position",
   "font-variant-alternates",
   "font-variant-caps",
   "font-variant-east-asian",
@@ -1712,7 +1684,6 @@ const properties = [
   "font-variant-numeric",
   "font-variant-position",
   "font-variation-settings",
-  "font-feature-settings",
   "ascent-override",
   "descent-override",
   "line-gap-override",
@@ -1747,7 +1718,6 @@ const properties = [
   "text-shadow",
   "text-transform",
   "vertical-align",
-  "baseline-source",
   "white-space",
   "word-break",
   "word-spacing",
@@ -1837,7 +1807,6 @@ const properties = [
   "tab-size",
   "table-layout",
   "ruby-position",
-  "math-depth",
   "math-style",
   "text-combine-upright",
   "touch-action",
@@ -1851,7 +1820,8 @@ const properties = [
   "unicode-range",
   "user-select",
   "widows",
-  "writing-mode"
+  "writing-mode",
+  "-webkit-background-clip"
 ];
 
 var smacss = /*#__PURE__*/Object.freeze({
